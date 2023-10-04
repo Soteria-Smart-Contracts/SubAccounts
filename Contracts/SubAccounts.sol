@@ -23,6 +23,11 @@ contract SubAccount{
         ERC20(_token).transferFrom(msg.sender, address(this), _amount);
     }
 
+    function WithdrawERC20(address _token, uint256 _amount) external{
+        require(msg.sender == SubAccountOwner, "Only SubAccount Owner can withdraw");
+        ERC20(_token).transfer(msg.sender, _amount);
+    }
+
     receive() external payable{
     }
 }

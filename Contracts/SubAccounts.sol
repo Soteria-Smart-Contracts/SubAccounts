@@ -24,9 +24,7 @@ contract SubAccounts{
 
         address NewSubAccountAddress = address(new SubAccount(msg.sender, Nickname, NewSubAccountID));
         SubAccountOwner[NewSubAccountID] = msg.sender;
-        AddressSubAccounts[msg.sender].push(NewSubAccountID);
-        AddressSubAccountsIndex[msg.sender][NewSubAccountID] = AddressSubAccounts[msg.sender].length - 1;
-        SubAccountAddress[NewSubAccountID] = NewSubAccountAddress;
+        AddRemoveSubAccount(NewSubAccountID, true);
 
         emit SubAccountCreated(msg.sender, SubIDIncrement);
         return (NewSubAccountID, Nickname);

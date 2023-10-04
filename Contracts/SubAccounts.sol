@@ -5,7 +5,8 @@ contract SubAccounts{
     uint256 public SubIDIncrement;
 
     mapping(address => uint256[]) public AddressSubAccounts;
-    //for each address, internally store a list of index positions of the subaccounts array 
+    //for each address, internally store a list of index positions of the subaccounts array so that we can replace the subaccount address with the last subaccount address in the array and then delete the last subaccount address in the array
+    
 
 
     mapping(uint256 => address) public SubAccountOwner;

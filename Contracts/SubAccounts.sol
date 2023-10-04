@@ -4,7 +4,7 @@ pragma solidity 0.8.19;
 contract SubAccounts{
     uint256 public SubIDIncrement;
 
-    mapping(address => uint256[]) public AddressSubAccounts;
+    mapping(address => SubAccountStruct[]) public AddressSubAccounts;
     //for each address, internally store a list of index positions of the subaccounts array so that we can replace the subaccount address with the last subaccount address in the array and then delete the last subaccount address in the array
     mapping(address => mapping(uint256 => uint256)) public AddressSubAccountsIndex;
 
@@ -30,7 +30,7 @@ contract SubAccounts{
 
         address NewSubAccountAddress = address(new SubAccount(msg.sender, Nickname, NewSubAccountID));
         SubAccountOwner[NewSubAccountID] = msg.sender;
-        AddressSubAccounts[msg.sender].push(NewSubAccountID);
+        AddressSubAccounts[msg.sender].push(SubAccountStructNewSubAccountID);
         AddressSubAccountsIndex[msg.sender][NewSubAccountID] = AddressSubAccounts[msg.sender].length - 1;
         SubAccountAddress[NewSubAccountID] = NewSubAccountAddress;
 

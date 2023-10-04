@@ -18,6 +18,7 @@ contract SubAccounts{
         address SubAccountAddress = address(new SubAccount(msg.sender, SubIDIncrement));
         SubAccountOwner[SubIDIncrement] = msg.sender;
         AddressSubAccounts[msg.sender].push(SubIDIncrement);
+        SubAccountAddress[SubIDIncrement] = SubAccountAddress;
         SubIDIncrement++;
 
         emit SubAccountCreated(msg.sender, SubIDIncrement);

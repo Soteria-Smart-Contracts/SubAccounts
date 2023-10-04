@@ -9,5 +9,26 @@ contract SubAccounts{
 }
 
 contract SubAccount{
+    address public owner;
+    uint256 public SubAccountID;
     
+    constructor(address _owner, uint256 _SubAccountID){
+        owner = _owner;
+        SubAccountID = _SubAccountID;
+    }
+    function deposit(uint256 _amount) public{
+        balance += _amount;
+    }
+    function withdraw(uint256 _amount) public{
+        balance -= _amount;
+    }
+    function getBalance() public view returns(uint256){
+        return balance;
+    }
+    function getOwner() public view returns(address){
+        return owner;
+    }
+    function getSubAccountID() public view returns(uint256){
+        return SubAccountID;
+    }
 }

@@ -41,6 +41,7 @@ contract SubAccount{
     constructor(address _owner, string Nickname, uint256 _SubAccountID){
         SubAccountOwner = _owner;
         SubAccountID = _SubAccountID;
+        SubAccountNickname = Nickname;
     }
 
     function DepositERC20(address _token, uint256 _amount) external{

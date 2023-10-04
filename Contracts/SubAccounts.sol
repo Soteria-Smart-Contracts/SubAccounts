@@ -39,7 +39,7 @@ contract SubAccounts{
 
         address NewSubAccountAddress = address(new SubAccount(msg.sender, Nickname, NewSubAccountID));
         SubAccountOwner[NewSubAccountID] = msg.sender;
-        AddRemoveSubAccount(NewSubAccountID, Addremove);
+        AddRemoveSubAccount(NewSubAccountID, true);
 
         payable(NewSubAccountAddress).transfer(msg.value);
 

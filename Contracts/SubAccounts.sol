@@ -58,7 +58,7 @@ contract SubAccounts{
 
         }
         else{
-            AddressSubAccounts[msg.sender][AddressSubAccountsIndex[ID]] = AddressSubAccounts[msg.sender][AddressSubAccounts.length - 1];
+            AddressSubAccounts[msg.sender][AddressSubAccountsIndex[msg.sender][ID]] = AddressSubAccounts[msg.sender][AddressSubAccounts.length - 1];
         }
     }
 

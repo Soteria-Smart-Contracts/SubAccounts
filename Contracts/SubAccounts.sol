@@ -2,6 +2,7 @@
 pragma solidity 0.8.19;
 
 contract SubAccounts{
+    
     mapping(address => uint256[]) public AddressSubAccounts;
     mapping(uint256 => address) public SubAccountOwner;
 
@@ -16,7 +17,7 @@ contract SubAccount{
         owner = _owner;
         SubAccountID = _SubAccountID;
     }
-    
+
     function deposit(uint256 _amount) public{
         balance += _amount;
     }

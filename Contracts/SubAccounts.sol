@@ -6,6 +6,8 @@ contract SubAccounts{
     mapping(address => uint256[]) public AddressSubAccounts;
     mapping(uint256 => address) public SubAccountOwner;
 
+    event SubAccountCreated(address indexed _owner, uint256 indexed _SubAccountID);
+
     
 
 

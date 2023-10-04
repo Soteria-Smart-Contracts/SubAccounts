@@ -13,6 +13,8 @@ contract SubAccounts{
     mapping(uint256 => address) public SubAccountAddress;
 
     event SubAccountCreated(address indexed _owner, uint256 indexed _SubAccountID);
+
+    stru
     
     constructor(){
         SubIDIncrement = 1;

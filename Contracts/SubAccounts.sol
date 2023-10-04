@@ -5,8 +5,9 @@ contract SubAccounts{
     uint256 public SubIDIncrement;
 
     mapping(address => uint256[]) public AddressSubAccounts;
+    //for each address, internally
 
-    
+
     mapping(uint256 => address) public SubAccountOwner;
     mapping(uint256 => address) public SubAccountAddress;
 

@@ -22,6 +22,7 @@ contract SubAccounts{
         SubIDIncrement++;
 
         emit SubAccountCreated(msg.sender, SubIDIncrement);
+        return SubIDIncrement;
     }
 
 

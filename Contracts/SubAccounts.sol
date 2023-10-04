@@ -32,7 +32,8 @@ contract SubAccounts{
         return (NewSubAccountID, Nickname);
     }
 
-    //Createsub account with ether depo
+    //Createsub account with ether deposit
+    
 
 
 

@@ -10,7 +10,7 @@ contract SubAccounts{
 }
 
 contract SubAccount{
-    address public owner;
+    address public SubAccountOwner;
     uint256 public SubAccountID;
 
     constructor(address _owner, uint256 _SubAccountID){
@@ -18,7 +18,7 @@ contract SubAccount{
         SubAccountID = _SubAccountID;
     }
 
-    
+
 
     receive() external payable{
     }

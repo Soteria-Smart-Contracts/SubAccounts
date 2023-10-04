@@ -33,7 +33,19 @@ contract SubAccounts{
     }
 
     //Createsub account with ether deposit
-    function CreateSubAccountWithEther() public returns(uint256 SubAccountID, string memory Nickname)
+    function CreateSubAccountWithEther() public payable returns(uint256 SubAccountID, string memory Nickname){
+        uint256 NewSubAccountID = SubIDIncrement;
+        SubIDIncrement++;
+
+        address NewSubAccountAddress = address(new SubAccount(msg.sender, Nickname, NewSubAccountID));
+        SubAccountOwner[NewSubAccountID] = msg.sender;
+        AddressSubAccounts[msg.sender].push(NewSubAccountID);
+        AddressSubAccountsIndex[msg.sender][NewSubAccountID] = AddressSubAccounts[msg.sender].length - 1;
+        SubAccountAddress[NewSubAccountID] = NewSubAccountAddress;
+
+        emit SubAccountCreated(msg.sender, SubIDIncrement);
+        return (NewSubAccountID, Nickname);
+    }
 
 
 

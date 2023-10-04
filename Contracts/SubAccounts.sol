@@ -38,7 +38,7 @@ contract SubAccount{
     string public SubAccountNickname;
     uint256 public SubAccountID;
 
-    constructor(address _owner, string Nickname, uint256 _SubAccountID){
+    constructor(address _owner, string memory Nickname, uint256 _SubAccountID){
         SubAccountOwner = _owner;
         SubAccountID = _SubAccountID;
         SubAccountNickname = Nickname;

@@ -16,13 +16,12 @@ contract SubAccounts{
 
     function CreateSubAccount() public returns(uint256 SubAccountID) {
         uint256 SubAccountID = SubIDIncrement;
-        
+        SubIDIncrement++;
 
         address NewSubAccountAddress = address(new SubAccount(msg.sender, SubIDIncrement));
         SubAccountOwner[SubIDIncrement] = msg.sender;
         AddressSubAccounts[msg.sender].push(SubIDIncrement);
         SubAccountAddress[SubIDIncrement] = NewSubAccountAddress;
-        SubIDIncrement++;
 
         emit SubAccountCreated(msg.sender, SubIDIncrement);
         return SubIDIncrement;

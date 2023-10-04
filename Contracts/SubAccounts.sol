@@ -14,11 +14,11 @@ contract SubAccount{
     uint256 public SubAccountID;
 
     constructor(address _owner, uint256 _SubAccountID){
-        owner = _owner;
+        SubAccountOwner = _owner;
         SubAccountID = _SubAccountID;
     }
 
-
+    function 
 
     receive() external payable{
     }

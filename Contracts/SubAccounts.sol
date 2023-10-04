@@ -18,7 +18,7 @@ contract SubAccounts{
         uint256 NewSubAccountID = SubIDIncrement;
         SubIDIncrement++;
 
-        address NewSubAccountAddress = address(new SubAccount(msg.sender, Nickname));
+        address NewSubAccountAddress = address(new SubAccount(msg.sender, Nickname, NewSubAccountID));
         SubAccountOwner[NewSubAccountID] = msg.sender;
         AddressSubAccounts[msg.sender].push(NewSubAccountID);
         SubAccountAddress[NewSubAccountID] = NewSubAccountAddress;

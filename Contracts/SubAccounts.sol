@@ -14,7 +14,11 @@ contract SubAccounts{
 
     event SubAccountCreated(address indexed _owner, uint256 indexed _SubAccountID);
 
-    stru
+    struct SubAccountStruct{
+        address SubAccountOwner;
+        string SubAccountNickname;
+        uint256 SubAccountID;
+    }
     
     constructor(){
         SubIDIncrement = 1;

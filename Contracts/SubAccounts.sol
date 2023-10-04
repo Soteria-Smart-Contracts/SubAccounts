@@ -43,6 +43,8 @@ contract SubAccounts{
         AddressSubAccountsIndex[msg.sender][NewSubAccountID] = AddressSubAccounts[msg.sender].length - 1;
         SubAccountAddress[NewSubAccountID] = NewSubAccountAddress;
 
+        
+
         emit SubAccountCreated(msg.sender, SubIDIncrement);
         return (NewSubAccountID, Nickname);
     }

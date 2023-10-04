@@ -52,7 +52,7 @@ contract SubAccounts{
     //Internal function
     
     function AddRemoveSubAccount(uint256 ID, bool Addremove) internal {
-        if
+        if(Addremove)
     }
 
 

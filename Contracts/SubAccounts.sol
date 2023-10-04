@@ -32,7 +32,7 @@ contract SubAccounts{
         return (NewSubAccountID, Nickname);
     }
 
-    //Createsub account with 
+    //Createsub account with ether depo
 
 
 

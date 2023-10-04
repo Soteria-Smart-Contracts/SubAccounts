@@ -2,6 +2,6 @@
 pragma solidity 0.8.19;
 
 contract SubAccounts{
-    mapping(address => uint256[]) public SubAccountCount;
+    mapping(address => uint256[]) public SubAccounts;
     mapping(uint256 => address) public SubAccountOwner;
 }

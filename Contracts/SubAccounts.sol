@@ -33,7 +33,7 @@ contract SubAccounts{
     }
 
     //Createsub account with ether deposit
-    function CreateSubAccountWithEther() public returns
+    function CreateSubAccountWithEther() public returns(uint256 SubAccountID, string memory Nickname)
 
 
 

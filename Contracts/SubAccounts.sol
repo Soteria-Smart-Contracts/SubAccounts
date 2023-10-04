@@ -51,7 +51,7 @@ contract SubAccounts{
 
     //Internal function
     
-    function AddRemoveSubAccount(uint256)
+    function AddRemoveSubAccount(uint256 Money) 
 
 
 

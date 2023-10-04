@@ -49,7 +49,9 @@ contract SubAccounts{
         return (NewSubAccountID, Nickname);
     }
 
+    //Internal function
     
+    function AddRemove
 
 
 

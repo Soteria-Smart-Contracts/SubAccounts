@@ -29,7 +29,7 @@ contract SubAccounts{
         SubAccountAddress[NewSubAccountID] = NewSubAccountAddress;
 
         emit SubAccountCreated(msg.sender, SubIDIncrement);
-        return SubIDIncrement;
+        return NewSubAccountID;
     }
 
     //Createsub account with 

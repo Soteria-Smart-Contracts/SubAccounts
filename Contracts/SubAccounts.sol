@@ -9,6 +9,10 @@ contract SubAccounts{
 
     event SubAccountCreated(address indexed _owner, uint256 indexed _SubAccountID);
     
+    constructor(){
+        SubIDIncrement = 1;
+    }
+
     
 
 

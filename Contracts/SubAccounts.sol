@@ -14,7 +14,7 @@ contract SubAccounts{
         SubIDIncrement = 1;
     }
 
-    function CreateSubAccount() public returns(uint256 SubAccountID) {
+    function CreateSubAccount() public returns(uint256 SubAccountID, string Nickname) {
         uint256 NewSubAccountID = SubIDIncrement;
         SubIDIncrement++;
 

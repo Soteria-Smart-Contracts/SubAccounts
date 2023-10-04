@@ -56,7 +56,7 @@ contract SubAccounts{
             AddressSubAccounts[msg.sender].push(ID);
         }
         else{
-            AddressSubAccounts
+            AddressSubAccounts[]
         }
     }
 

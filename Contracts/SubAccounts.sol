@@ -35,6 +35,7 @@ contract SubAccounts{
 
 contract SubAccount{
     address public SubAccountOwner;
+    string public SubAccountNickname;
     uint256 public SubAccountID;
 
     constructor(address _owner, uint256 _SubAccountID){

@@ -23,7 +23,7 @@ contract SubAccounts{
         SubIDIncrement++;
 
         address NewSubAccountAddress = address(new SubAccount(msg.sender, Nickname, NewSubAccountID));
-        SubAccountAddress 
+        SubAccountAddress[NewSubAccountID]
         SubAccountOwner[NewSubAccountID] = msg.sender;
         AddRemoveSubAccount(NewSubAccountID, true);
 

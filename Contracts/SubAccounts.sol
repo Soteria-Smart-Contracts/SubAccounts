@@ -59,7 +59,7 @@ contract SubAccounts{
         }
         else{
             AddressSubAccounts[msg.sender][AddressSubAccountsIndex[msg.sender][ID]] = AddressSubAccounts[msg.sender][AddressSubAccounts[msg.sender].length - 1];
-            AddressSubAccounts[msg.sender]
+            AddressSubAccounts[msg.sender].pop();
         }
     }
 

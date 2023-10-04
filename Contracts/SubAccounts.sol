@@ -43,7 +43,7 @@ contract SubAccounts{
         AddressSubAccountsIndex[msg.sender][NewSubAccountID] = AddressSubAccounts[msg.sender].length - 1;
         SubAccountAddress[NewSubAccountID] = NewSubAccountAddress;
 
-        payable(NewSubAccountAddress).transfer()
+        payable(NewSubAccountAddress).transfer(msg.value);
 
         emit SubAccountCreated(msg.sender, SubIDIncrement);
         return (NewSubAccountID, Nickname);

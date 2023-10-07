@@ -53,11 +53,12 @@ contract SubAccounts{
         if(Addremove){
             AddressSubAccounts[msg.sender].push(ID);
             AddressSubAccountsIndex[msg.sender][ID] = AddressSubAccounts[msg.sender].length - 1;
-
+            
         }
         else{
             AddressSubAccounts[msg.sender][AddressSubAccountsIndex[msg.sender][ID]] = AddressSubAccounts[msg.sender][AddressSubAccounts[msg.sender].length - 1];
-            
+            AddressSubAccounts[msg.sender].pop();
+            AddressSubAccountsIndex[msg.sender][ID] = 0;
         }
     }
 
